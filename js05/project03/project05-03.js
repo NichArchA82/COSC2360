@@ -11,3 +11,25 @@
 */
 
 const sourceDoc = document.getElementById('source_doc');
+const toc = document.getElementById('toc');
+let headingCount = 1;
+const heading = 'H2';
+
+for (let n = sourceDoc.firstElementChild; n != null; n = n.nextElementSibling) {
+      if (n.nodeName === heading) {
+            const anchor = document.createElement('a');
+            anchor.id = "doclink" + headingCount;
+
+            n.insertBefore(anchor, n.firstChild);
+
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.textContent = n.textContent;
+            link.href = "#doclink" + headingCount;
+            listItem.appendChild(link);
+
+            toc.appendChild(listItem);
+
+            headingCount++;
+      }
+}
