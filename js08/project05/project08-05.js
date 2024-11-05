@@ -4,8 +4,8 @@
       Project 08-05
 
       Interface to replay a chess game stored in a JSON file
-      Author: 
-      Date:   
+      Author: Nicholas Archuletta
+      Date:   Nov.04.2024
 
       Filename: project08-05.js
 */
