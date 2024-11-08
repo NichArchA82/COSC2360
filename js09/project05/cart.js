@@ -4,8 +4,8 @@
       Project 09-05
 
       Project to add orders to shopping cart web storage
-      Author: 
-      Date:   
+      Author: Nicholas Archuletta
+      Date:   Nov.08.2024
 
       Filename: cart.js
 */
@@ -19,8 +19,8 @@ window.addEventListener("load", displayCart);
 function displayCart() {
    
    // Check that there are items in the shopping cart
-   if (sessionStorage.get(itemsInCart)) {
-      let itemTotal = sessionStorage.get(itemsInCart);
+   if (sessionStorage.getItem('itemsInCart')) {
+      let itemTotal = sessionStorage.getItem('itemsInCart');
       
       // Create the code for the table and the table header
       let cartTable = document.createElement("table");
@@ -32,7 +32,7 @@ function displayCart() {
       for (let i = 1; i <= itemTotal; i++) {
          
          // Retrieve information about a product added to the cart
-         let productArr = session.getItem("cartItem" + i).split(" ; ");
+         let productArr = sessionStorage.getItem("cartItem" + i).split(" & ");
          let newRow = document.createElement("tr");
          
          // Display the name of the product
