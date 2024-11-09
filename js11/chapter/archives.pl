@@ -1,9 +1,14 @@
-#!"D:\xampp\perl\bin\perl.exe"
+#!/usr/bin/perl
+
+# "D:\xampp\perl\bin\perl.exe"
 
 # Confirm that perl is located in the usr/bin/perl folder on the server
 
 #All perl scripts should use strict
 use strict;
+
+#added to point to the CGI library as Xampp was not finding this
+use lib '/usr/share/perl5';
 
 use CGI;
 my $cgi_object = new CGI();
