@@ -14,7 +14,7 @@ let imageBox = document.getElementById("nasaImage");
 let dateBox = document.getElementById("dateBox");
 
 dateBox.onchange = function() {   
-      dateStr = dateBox.value;
+      const dateStr = dateBox.value;
 
       fetch(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${dateStr}`)
       .then(res => res.json())
