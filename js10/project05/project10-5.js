@@ -5,8 +5,8 @@
 
     Crossword Puzzle Code for Keyboard Actions
     
-    Author: 
-    Date:   
+    Author: Nicholas Archuletta
+    Date:   Nov.11.2024
 
     Filename: project10-05.js
 
